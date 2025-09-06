@@ -1,0 +1,134 @@
+body {
+  background-color: rgb(164, 143, 193);
+}
+
+/* Scritta Nascosta */
+.scritta-nascosta {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.scritta-nascosta.visibile {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-colonna {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ritaglia per riempire */
+  display: block;
+  border-radius: 5px;
+}
+
+/* Animazioni */
+@keyframes slideIn {
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideFromRight {
+  to {
+    right: 0;
+  }
+}
+
+/* Slide in / Slide right */
+.slide-in {
+  position: relative;
+  left: -100%;
+  animation: slideIn 0.9s ease-out forwards;
+}
+
+.slide-right {
+  position: relative;
+  right: -100%;
+  animation: slideFromRight 1.0s ease-out forwards;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.offcanvas {
+  background-color: rgb(164, 143, 193);
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  font-size: 20px;
+  color: rgb(0, 88, 108) !important;
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    font-size: large;
+  }
+
+  .offcanvas {
+    --bs-offcanvas-width: 150px;
+  }
+
+}
+
+@media(min-width: 768px) {
+  .offcanvas {
+    --bs-offcanvas-width: 150px;
+  }
+}
+
+@media(min-width: 992px) {
+  .navbar {
+    font-size: large;
+  }
+}
+
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 88, 108, 0.3);
+  border-radius: 7px;
+}
+
+
+.course-item {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.course-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.course-icon {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.course-item:hover .course-icon {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+
+/* Sfondo e stile generale del menu a tendina */
+.dropdown-menu {
+  background-color: rgb(164, 143, 193);
+  /* viola */
+  border: none;
+  /* opzionale: togli il bordo */
+  border-radius: 8px;
+  /* angoli arrotondati */
+}
+
+/* Link interni al menu */
+.dropdown-menu .dropdown-item {
+  color: rgb(0, 88, 108);
+}
+
