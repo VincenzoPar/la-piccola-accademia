@@ -2,14 +2,14 @@
 /* === Font Face Definitions === */
 @font-face {
     font-family: 'Butler';
-    src: url('../fonts/Butler/Butler-Regular.ttf') format('truetype');
+    src: url('fonts/Butler/Butler-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Balistone';
-    src: url('../fonts/balistone/Balistone.ttf') format('truetype');
+    src: url('fonts/balistone/Balistone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
