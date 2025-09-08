@@ -72,16 +72,16 @@
     font-size: large;
   }
 
-  .offcanvas {
+  /*.offcanvas {
     --bs-offcanvas-width: 150px;
-  }
+  }*/
 
 }
 
 @media(min-width: 768px) {
-  .offcanvas {
+  /*.offcanvas {
     --bs-offcanvas-width: 150px;
-  }
+  }*/
 }
 
 @media(min-width: 992px) {
@@ -91,7 +91,8 @@
 }
 
 .shadow {
-  box-shadow: 0 4px 12px rgba(0, 88, 108, 0.3);
+  /*ox-shadow: 0 4px 12px rgba(0, 88, 108, 0.3);*/
+  box-shadow: rgb(164, 143, 193) 0px 4px 12px;
   border-radius: 7px;
 }
 
