@@ -1,6 +1,4 @@
-body {
-  background-color: rgb(164, 143, 193);
-}
+
 
 /* Scritta Nascosta */
 .scritta-nascosta {
@@ -53,11 +51,12 @@ body {
   background-color: transparent !important;
 }
 
+/*
 .offcanvas {
   background-color: rgb(164, 143, 193);
   backdrop-filter: none !important;
   box-shadow: none !important;
-}
+}*/
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -112,20 +111,17 @@ body {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.course-item:hover .course-icon {
+/*.course-item:hover .course-icon {
   color: #0d6efd;
   transform: scale(1.2);
 }
 
-/* Sfondo e stile generale del menu a tendina */
 .dropdown-menu {
   background-color: rgb(164, 143, 193);
-  /* viola */
+
   border: none;
-  /* opzionale: togli il bordo */
   border-radius: 8px;
-  /* angoli arrotondati */
-}
+}*/
 
 /* Link interni al menu */
 .dropdown-menu .dropdown-item {
