@@ -133,3 +133,14 @@
   color: rgb(0, 88, 108);
 }
 
+#prenotime-widget iframe {
+  width: 85vw !important;
+}
+
+/* Su mobile riduce l'altezza minima per non occupare troppo schermo */
+@media (max-width: 576px) {
+  #prenotime-widget iframe {
+    width: 80vw !important;
+  }
+}
+
