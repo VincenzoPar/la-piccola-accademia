@@ -1,3 +1,14 @@
+// Toggle mobile menu (Tailwind version)
+document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+});
+
 window.addEventListener('scroll', function() {
     const windowHeight = window.innerHeight;
     // Altri elementi nascosti (es. scritte)

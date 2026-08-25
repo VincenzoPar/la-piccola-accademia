@@ -4,258 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Siamo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Chi Siamo | La Piccola Accademia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logoAccademia.png" type="image/png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { teal: '#00586c', lavender: '#a48fc1', lavlight: '#f4f0fa' },
+                    fontFamily: { decorative: ['Balistone', 'serif'], body: ['Butler', 'serif'] },
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <!-- Container principale -->
-    <div class="container-fluid d-flex" style="background-color: rgb(164, 143, 193);">
-        <div class="container-fluid mx-1 mx-md-3" style="background-color: white;">
+<body class="font-body bg-lavender">
+    <div class="min-h-screen">
+        <div class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl">
 
-            <nav class="navbar navbar-expand-lg shadow pt-lg-3">
-                <div class="container-fluid p-0">
-                    <!-- Logo
-                <a class="navbar-brand ps-3" href="#">
-                    <img src="img/logoAccademia.png" alt="Logo Accademia" style="height: 50px;">
-                </a> -->
+            <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+                <div class="flex items-center justify-between px-4 md:px-8 py-4">
+                    <a href="index.html" class="decorative-text text-2xl text-lavender">La Piccola Accademia</a>
 
-                    <!-- Bottone menu -->
-                    <button class="navbar-toggler ps-0 ms-0 pt-3" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button id="menuBtn" class="lg:hidden text-teal focus:outline-none" aria-label="Apri menu">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
 
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-md-2">
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="#">Chi
-                                        Siamo</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="i-corsi.html">Corsi</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="galleria.html">Galleria</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="https://forms.gle/dv9BEQCxvQ4omXiz6">Iscriviti</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link active normal-text fw-semibold" href="https://forms.gle/ec81f6NGSHMheNuv6">Lezione Gratuita</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link active normal-text fw-semibold" href="prenotaPilates.html">Pilates Reformer</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-
-            <!-- Colonna sinistra (solo titoli e testi da md in poi) -->
-
-
-            <!-- Prima riga (titoli grandi) -->
-            <div class="row d-none d-md-flex ms-md-1 mt-md-4">
-                <h1 class="fw-bold display-1 slide-in normal-text ps-md-4" style="color: rgb(0, 88, 108);">
-                    La Piccola <br> Accademia
-                </h1>
-                <h1 class="slide-right decorative-text display-1 ps-md-4" style="color: rgb(164, 143, 193);">
-                    loredana mattei
-                </h1>
-            </div>
-
-
-            <!-- LOGO (solo su mobile) -->
-            <div class="col-12 d-md-none mb-3 d-flex justify-content-center">
-                <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="img-fluid"
-                    style="max-height: 180px;">
-            </div>
-
-            <div class="row mt-1 pt-2 shadow scritta-nascosta align-items-center d-flex">
-                <div class="row mt-1 pt-2 scritta-nascosta">
-                    <h1 class="decorative-text pt-2 text-center display-2" style="color: rgb(164, 143, 193);">La
-                        direttrice artistica
-                    </h1>
-                </div>
-                <div class="col-md-6">
-                    <p class="normal-text justify-content-end ps-md-5 fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                        <span style="font-weight: bold;">Loredana Mattei</span>, diplomata in danza classica nel'85
-                        presso
-                        C.S.S.C di Benevento, dopo innumerevoli
-                        e continui corsi di aggiornamento e perfezionamento sulla metodologia didattica in Italia e
-                        all'estero, dà vita a "La Piccola Accademia". Numerosi
-                        i titoli professionali alle spalle fra cui la laurea in scienze motorie. Dal 2019 è insegnante
-                        certificata Giocodanza&reg;.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="img/loredanaMattei.jpeg" alt="Foto Loredana Mattei" class="img-fluid rounded shadow "
-                        style="max-width: 320px;" loading="lazy">
-                </div>
-
-                <div class="row mt-2 ms-0 pt-3 shadow scritta-nascosta">
-                    <h1 class="decorative-text pt-2 text-center display-2" style="color: rgb(164, 143, 193);">Il Corpo
-                        Docenti</h1>
-                    <ul class="list-unstyled">
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-heart-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Luigi Fortunato</span>
-                            - Diplomato presso A.N.D di Roma, ha collezionato importanti esperienza
-                            negli studi Mediaset come ballerino professionista.
-                        </li>
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-diamond-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Frank Polvere</span>
-                            - Ballerino e coreografo di hip-hop e reggaetton, ha partecipato a diversi
-                            videoclip musicali con artisti internazionali e si è esibito anche sul palco
-                            di "Italia's Got Talent".
-                        </li>
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-star-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Sonia Pelosi</span>
-                            - Diplomata presso La Piccola Accademia nel 2001, istruttrice di Pilates
-                            e specializzata in ginnastica rieducativa posturale. Insegnante certificata Giocodanza&reg;.
-                        </li>
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-star-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Alessandro Cerqua</span>
-                            - diplomato alla Fondazione Lyceum Mara Fusco in classico, modern e flamenco,
-                            ha perfezionato la sua formazione a New York in prestigiosi centri di danza come Alvin Ailey
-                            e
-                            Broadway Dance Center, entrando nel cast ufficiale del musical “Tony & Tina’s Wedding”.
-                            Vincitore di premi e borse di studio internazionali, tra cui Youth American Grand Prix e
-                            Concurso Flamenco Puro a Jerez, ha ricevuto riconoscimenti in Italia e all’estero.
-                            Oggi è coreografo, insegnante e ballerino professionista specializzato in modern e flamenco.
-                        </li>
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-star-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Fabiana Porto</span>
-                            - Assistente corsi preparatori danza classica.
-                        </li>
-                        <li class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            <i class="bi bi-star-fill me-2" style="color: rgb(164, 143, 193);"></i>
-                            <span style="font-weight: bold;">Chiara Nacca</span>
-                            - Assistente corsi danza contemporanea.
-                        </li>
+                    <ul class="hidden lg:flex gap-6 items-center normal-text">
+                        <li><a href="index.html" class="text-teal font-semibold hover:text-lavender transition">Home</a></li>
+                        <li><a href="#" class="text-lavender font-semibold border-b-2 border-lavender pb-1">Chi Siamo</a></li>
+                        <li><a href="i-corsi.html" class="text-teal font-semibold hover:text-lavender transition">Corsi</a></li>
+                        <li><a href="galleria.html" class="text-teal font-semibold hover:text-lavender transition">Galleria</a></li>
+                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold hover:text-lavender transition">Iscriviti</a></li>
+                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold hover:text-lavender transition">Lezione Gratuita</a></li>
+                        <li><a href="prenotaPilates.html" class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition">Pilates Reformer</a></li>
                     </ul>
                 </div>
 
-
-                <div class="row mt-4 ms-0 text-center scritta-nascosta shadow p-4"
-                    style="background-color: rgb(0, 88, 108);">
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/settima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/ottava.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/nona.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/decima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/undicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/dodicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/tredicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/quattordicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/quindicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/sedicesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/diciassettesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-3 mb-4">
-                        <img src="img/diciottesima.jpg" class="img-colonna" loading="lazy">
-                    </div>
+                <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html" class="text-teal font-semibold block">Home</a></li>
+                        <li><a href="#" class="text-lavender font-semibold block">Chi Siamo</a></li>
+                        <li><a href="i-corsi.html" class="text-teal font-semibold block">Corsi</a></li>
+                        <li><a href="galleria.html" class="text-teal font-semibold block">Galleria</a></li>
+                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold block">Iscriviti</a></li>
+                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold block">Lezione Gratuita</a></li>
+                        <li><a href="prenotaPilates.html" class="text-teal font-semibold block">Pilates Reformer</a></li>
+                    </ul>
                 </div>
+            </nav>
 
-                <div class="row">
-                    <!-- Colonna Prenota -->
-                    <div class="col-md-6 p-4 mt-3 scritta-nascosta shadow">
-                        <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193);; font-size: 40px;">Iscriviti
-                        </h1>
-                        <p class="normal-text" style="color: rgb(0, 88, 108); font-size: 25px;">
-                            Consulta le nostre proposte ed iscriviti ai corsi che preferisci. <br>
-                        </p>
-                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="normal-text fs-4"
-                            style="color: rgb(0, 88, 108);">
-                            Vai alla pagina di prenotazione
-                        </a>
-                        <br>
-                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="normal-text fs-4"
-                            style="color: rgb(0, 88, 108);">
-                            Prenota una lezione di prova gratuita
-                        </a>
-                        <br>
-                        <a href="prenotaPilates.html" class="normal-text fs-4" style="color: rgb(0, 88, 108);">
-                            Prenota una lezione di Pilates Reformer
-                        </a>
-                    </div>
-                    <!-- Colonna Social -->
-                    <div class="col-md-6 p-4 mt-3 shadow scritta-nascosta">
-                        <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193); font-size: 40px;">Seguici sui
-                            social</h1>
-                        <div class="mt-3 d-flex gap-3">
-                            <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA=="
-                                class="text-white fs-2"><i class="bi bi-instagram"
-                                    style="color: rgb(0, 88, 108);"></i></a>
-                            <a href="https://www.facebook.com/laPiccolAccademia" class="text-white fs-2"><i
-                                    class="bi bi-facebook" style="color: rgb(0, 88, 108);"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <!-- LOGO mobile -->
+            <div class="md:hidden flex justify-center py-6">
+                <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="max-h-40">
             </div>
 
-            <div class="row scritta-nascosta shadow mt-4 mb-4 p-4 text-center">
-                <div class="normal-text" style="color: rgb(0, 88, 108); font-size: 25px;">
-                    <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193); font-size: 40px;">Info e Contatti
-                    </h1>
+            <!-- Direttrice artistica -->
+            <section class="scritta-nascosta px-6 py-14">
+                <h1 class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10">La direttrice artistica</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <p class="normal-text text-xl text-teal leading-relaxed">
+                        <span class="font-bold">Loredana Mattei</span>, diplomata in danza classica nel'85 presso
+                        C.S.S.C di Benevento, dopo innumerevoli e continui corsi di aggiornamento e perfezionamento
+                        sulla metodologia didattica in Italia e all'estero, dà vita a "La Piccola Accademia". Numerosi
+                        i titoli professionali alle spalle fra cui la laurea in scienze motorie. Dal 2019 è insegnante
+                        certificata Giocodanza&reg;.
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/loredanaMattei.jpeg" alt="Foto Loredana Mattei"
+                            class="rounded-2xl shadow-xl max-w-[320px]" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corpo docenti -->
+            <section class="scritta-nascosta px-6 py-14 bg-lavlight/50">
+                <h2 class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10">Il Corpo Docenti</h2>
+                <ul class="space-y-6 max-w-4xl mx-auto">
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-heart-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Luigi Fortunato</span> - Diplomato presso A.N.D di Roma, ha collezionato importanti esperienza
+                            negli studi Mediaset come ballerino professionista.</span>
+                    </li>
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-diamond-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Frank Polvere</span> - Ballerino e coreografo di hip-hop e reggaetton, ha partecipato a diversi
+                            videoclip musicali con artisti internazionali e si è esibito anche sul palco
+                            di "Italia's Got Talent".</span>
+                    </li>
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-star-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Sonia Pelosi</span> - Diplomata presso La Piccola Accademia nel 2001, istruttrice di Pilates
+                            e specializzata in ginnastica rieducativa posturale. Insegnante certificata Giocodanza&reg;.</span>
+                    </li>
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-star-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Alessandro Cerqua</span> - diplomato alla Fondazione Lyceum Mara Fusco in classico, modern e flamenco,
+                            ha perfezionato la sua formazione a New York in prestigiosi centri di danza come Alvin Ailey e
+                            Broadway Dance Center, entrando nel cast ufficiale del musical “Tony & Tina’s Wedding”.
+                            Vincitore di premi e borse di studio internazionali, tra cui Youth American Grand Prix e
+                            Concurso Flamenco Puro a Jerez, ha ricevuto riconoscimenti in Italia e all’estero.
+                            Oggi è coreografo, insegnante e ballerino professionista specializzato in modern e flamenco.</span>
+                    </li>
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-star-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Fabiana Porto</span> - Assistente corsi preparatori danza classica.</span>
+                    </li>
+                    <li class="normal-text text-lg text-teal flex gap-3">
+                        <i class="bi bi-star-fill text-lavender mt-1"></i>
+                        <span><span class="font-bold">Chiara Nacca</span> - Assistente corsi danza contemporanea.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Galleria docenti -->
+            <section class="scritta-nascosta bg-teal px-6 py-14">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="img/settima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/ottava.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/nona.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/decima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/undicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/dodicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/tredicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/quattordicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/quindicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/sedicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/diciassettesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                    <img src="img/diciottesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Iscriviti + Social -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14">
+                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight">
+                    <h2 class="decorative-text text-3xl text-lavender mb-4">Iscriviti</h2>
+                    <p class="normal-text text-xl text-teal mb-4">
+                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
+                    </p>
+                    <div class="flex flex-col gap-2 normal-text text-lg">
+                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal hover:text-lavender transition">Vai alla pagina di prenotazione</a>
+                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal hover:text-lavender transition">Prenota una lezione di prova gratuita</a>
+                        <a href="prenotaPilates.html" class="text-teal hover:text-lavender transition">Prenota una lezione di Pilates Reformer</a>
+                    </div>
+                </div>
+                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight">
+                    <h2 class="decorative-text text-3xl text-lavender mb-4">Seguici sui social</h2>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA==" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scritta-nascosta text-center px-6 py-14">
+                <h2 class="decorative-text text-3xl text-lavender mb-4">Info e Contatti</h2>
+                <p class="normal-text text-xl text-teal">
                     Segreteria: +39 3272365497 <br>
                     Loredana Mattei: +39 3383298014
-                </div>
-            </div>
+                </p>
+            </section>
 
-
-            <footer class="text-center mt-5 mb-4">
-                <div class="d-flex justify-content-center align-items-center gap-2">
-                    <span style="color: rgb(164, 143, 193);">Powered by</span>
-                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="img-fluid" style="max-width: 100px;">
+            <footer class="text-center py-8 border-t border-lavlight">
+                <div class="flex justify-center items-center gap-2">
+                    <span class="normal-text text-lavender">Powered by</span>
+                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]">
                 </div>
             </footer>
-
         </div>
     </div>
-
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>

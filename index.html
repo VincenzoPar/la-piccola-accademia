@@ -4,247 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La piccola accademia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>La Piccola Accademia | Scuola di Danza a Piedimonte Matese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logoAccademia.png" type="image/png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { teal: '#00586c', lavender: '#a48fc1', lavlight: '#f4f0fa' },
+                    fontFamily: { decorative: ['Balistone', 'serif'], body: ['Butler', 'serif'] },
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="font-body bg-lavender">
     <!-- Container principale -->
-    <div class="container-fluid d-flex" style="background-color: rgb(164, 143, 193);">
-        <div class="container-fluid mx-1 mx-md-3" style="background-color: white;">
+    <div class="min-h-screen">
+        <div class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl">
 
-            <nav class="navbar navbar-expand-lg shadow pt-lg-3">
-                <div class="container-fluid p-0">
-                    <!-- Logo
-                <a class="navbar-brand ps-3" href="#">
-                    <img src="img/logoAccademia.png" alt="Logo Accademia" style="height: 50px;">
-                </a> -->
+            <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+                <div class="flex items-center justify-between px-4 md:px-8 py-4">
+                    <a href="index.html" class="decorative-text text-2xl text-lavender">La Piccola Accademia</a>
 
-                    <!-- Bottone menu -->
-                    <button class="navbar-toggler ps-0 ms-0 pt-3" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button id="menuBtn" class="lg:hidden text-teal focus:outline-none" aria-label="Apri menu">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
 
-                    <!-- Offcanvas menu -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-md-2">
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="#">Home</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="chi-siamo.html">Chi
-                                        Siamo</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="i-corsi.html">Corsi</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="galleria.html">Galleria</a>
-                                </li>
-                                <li class="nav-item me-md-2">
-                                    <a class="nav-link active normal-text fw-semibold" href="https://forms.gle/dv9BEQCxvQ4omXiz6">Iscriviti</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link active normal-text fw-semibold" href="https://forms.gle/ec81f6NGSHMheNuv6">Lezione Gratuita</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link active normal-text fw-semibold" href="prenotaPilates.html">Pilates Reformer</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <ul class="hidden lg:flex gap-6 items-center normal-text">
+                        <li><a href="#" class="text-lavender font-semibold border-b-2 border-lavender pb-1">Home</a></li>
+                        <li><a href="chi-siamo.html" class="text-teal font-semibold hover:text-lavender transition">Chi Siamo</a></li>
+                        <li><a href="i-corsi.html" class="text-teal font-semibold hover:text-lavender transition">Corsi</a></li>
+                        <li><a href="galleria.html" class="text-teal font-semibold hover:text-lavender transition">Galleria</a></li>
+                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold hover:text-lavender transition">Iscriviti</a></li>
+                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold hover:text-lavender transition">Lezione Gratuita</a></li>
+                        <li><a href="prenotaPilates.html" class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition">Pilates Reformer</a></li>
+                    </ul>
+                </div>
+
+                <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#" class="text-lavender font-semibold block">Home</a></li>
+                        <li><a href="chi-siamo.html" class="text-teal font-semibold block">Chi Siamo</a></li>
+                        <li><a href="i-corsi.html" class="text-teal font-semibold block">Corsi</a></li>
+                        <li><a href="galleria.html" class="text-teal font-semibold block">Galleria</a></li>
+                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold block">Iscriviti</a></li>
+                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold block">Lezione Gratuita</a></li>
+                        <li><a href="prenotaPilates.html" class="text-teal font-semibold block">Pilates Reformer</a></li>
+                    </ul>
                 </div>
             </nav>
 
 
-            <!-- Intestazione e titoli -->
-            <div class="row mt-3 mb-5 scritta-nascosta align-items-stretch">
-
-                <!-- Colonna sinistra (solo titoli e testi da md in poi) -->
-                <div class="col-md-6 d-flex flex-column shadow d-none d-md-flex">
-
-                    <!-- Prima riga (titoli grandi) -->
-                    <div class="row ms-md-1 mt-md-4">
-                        <h1 class="fw-bold display-1 slide-in normal-text ps-md-4" style="color: rgb(0, 88, 108);">
-                            La Piccola <br> Accademia
-                        </h1>
-                        <h1 class="slide-right decorative-text display-1 ps-md-4" style="color: rgb(164, 143, 193);">
-                            loredana mattei
-                        </h1>
-                    </div>
-
-                    <!-- Seconda riga (testi) -->
-                    <div class="row ms-md-1 flex-grow-1 d-flex align-items-center">
-                        <div>
-                            <p class="mb-4 normal-text text-center fs-3 fs-md-2" style="color: rgb(0, 88, 108);">
-                                "La disciplina incontra l'arte, <br> e il talento trova la sua forma"
-                            </p>
-                            <p class="mt-4 mb-4 normal-text justify-content fs-4 fs-md-2"
-                                style="color: rgb(0, 88, 108);">
-                                La Piccola Accademia è uno spazio dedicato all’arte della danza, dove passione,
-                                disciplina e creatività si incontrano. Offriamo corsi per tutte le età e i livelli,
-                                guidati da insegnanti qualificati che accompagnano ogni allievo in un percorso di
-                                crescita tecnica ed espressiva.
-                                Che tu voglia muovere i primi passi o perfezionare il tuo stile, qui troverai un
-                                ambiente accogliente e stimolante,
-                                in cui la danza diventa emozione e condivisione.
-                            </p>
-                        </div>
-                    </div>
+            <!-- Hero -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-10 py-10 md:py-16 items-center bg-gradient-to-b from-lavlight to-white">
+                <div class="hidden md:flex flex-col scritta-nascosta">
+                    <h1 class="normal-text font-bold text-4xl lg:text-6xl text-teal leading-tight">
+                        La Piccola <br> Accademia
+                    </h1>
+                    <h1 class="decorative-text text-4xl lg:text-6xl text-lavender mb-6">
+                        loredana mattei
+                    </h1>
+                    <p class="normal-text text-2xl text-teal italic mb-4">
+                        "La disciplina incontra l'arte, <br> e il talento trova la sua forma"
+                    </p>
+                    <p class="normal-text text-lg text-teal leading-relaxed">
+                        La Piccola Accademia è uno spazio dedicato all'arte della danza, dove passione,
+                        disciplina e creatività si incontrano. Offriamo corsi per tutte le età e i livelli,
+                        guidati da insegnanti qualificati che accompagnano ogni allievo in un percorso di
+                        crescita tecnica ed espressiva.
+                        Che tu voglia muovere i primi passi o perfezionare il tuo stile, qui troverai un
+                        ambiente accogliente e stimolante, in cui la danza diventa emozione e condivisione.
+                    </p>
                 </div>
 
-                <!-- LOGO (solo su mobile) -->
-                <div class="col-12 d-md-none mb-3 d-flex justify-content-center">
-                    <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="img-fluid"
-                        style="max-height: 180px;">
+                <div class="md:hidden flex justify-center">
+                    <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="max-h-44">
                 </div>
 
-                <!-- Colonna con immagine ballerina (sempre visibile) -->
-                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="flex justify-center scritta-nascosta">
                     <img src="img/ballerinaPoltrona.jpg" alt="immagineBallerina"
-                        class="img-fluid h-100 m-md-3 me-md-3 shadow" loading="lazy">
+                        class="rounded-2xl shadow-xl w-full h-full max-h-[520px] object-cover" loading="lazy">
                 </div>
 
-                <!-- Testi su mobile (sotto l’immagine) -->
-                <div class="col-12 d-md-none mt-3">
-                    <div class="shadow p-3">
-                        <p class="mb-4 normal-text text-center fs-3 fs-md-2"
-                            style="font-size: 28px; color: rgb(0, 88, 108);">
-                            "La disciplina incontra l'arte, <br> e il talento trova la sua forma"
-                        </p>
-                        <p class="normal-text text-justify fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                            La Piccola Accademia è uno spazio dedicato all’arte della danza, dove passione,
-                            disciplina e creatività si incontrano. Offriamo corsi per tutte le età e i livelli,
-                            guidati da insegnanti qualificati che accompagnano ogni allievo in un percorso di
-                            crescita tecnica ed espressiva.
-                            Che tu voglia muovere i primi passi o perfezionare il tuo stile, qui troverai un
-                            ambiente accogliente e stimolante,
-                            in cui la danza diventa emozione e condivisione.
-                        </p>
-                    </div>
+                <div class="md:hidden bg-white rounded-xl shadow-lg p-4 scritta-nascosta">
+                    <p class="normal-text text-center text-2xl text-teal italic mb-4">
+                        "La disciplina incontra l'arte, <br> e il talento trova la sua forma"
+                    </p>
+                    <p class="normal-text text-justify text-lg text-teal">
+                        La Piccola Accademia è uno spazio dedicato all'arte della danza, dove passione,
+                        disciplina e creatività si incontrano. Offriamo corsi per tutte le età e i livelli,
+                        guidati da insegnanti qualificati che accompagnano ogni allievo in un percorso di
+                        crescita tecnica ed espressiva.
+                        Che tu voglia muovere i primi passi o perfezionare il tuo stile, qui troverai un
+                        ambiente accogliente e stimolante, in cui la danza diventa emozione e condivisione.
+                    </p>
                 </div>
+            </section>
 
-            </div>
-
-
-
-
-            <div class="row mt-1 scritta-nascosta shadow text-center">
-                <h1 class="decorative-text pt-2 display-2" style="color: rgb(164, 143, 193);">Chi siamo</h1>
-                <p class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                    Dai primi passi alla formazione avanzata, <br> ogni percorso è costruito per sviluppare tecnica,
+            <!-- Chi siamo teaser -->
+            <section class="scritta-nascosta text-center px-6 py-14 border-t border-lavlight">
+                <h2 class="decorative-text text-4xl md:text-5xl text-lavender mb-4">Chi siamo</h2>
+                <p class="normal-text text-xl text-teal max-w-3xl mx-auto">
+                    Dai primi passi alla formazione avanzata, ogni percorso è costruito per sviluppare tecnica,
                     musicalità ed espressività.
-                    <br>
-                    <a href="chi-siamo.html" class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                        Scopri chi siamo
-                    </a>
                 </p>
-            </div>
+                <a href="chi-siamo.html"
+                    class="inline-block mt-6 normal-text text-lg text-white bg-teal px-6 py-3 rounded-full hover:bg-lavender transition">
+                    Scopri chi siamo
+                </a>
+            </section>
 
-            <div class="row mt-4 shadow scritta-nascosta text-center pb-2">
-                <h1 class="decorative-text pt-2 display-2" style="color: rgb(164, 143, 193);">Dove ci troviamo</h1>
-                <p class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
+            <!-- Dove ci troviamo -->
+            <section class="scritta-nascosta text-center px-6 py-14 bg-lavlight/50">
+                <h2 class="decorative-text text-4xl md:text-5xl text-lavender mb-4">Dove ci troviamo</h2>
+                <p class="normal-text text-xl text-teal mb-6 max-w-2xl mx-auto">
                     Vieni a trovarci a Piedimonte Matese, Strada Provinciale 331, n°95.
                     Clicca sulla mappa per visualizzare la nostra posizione.
                 </p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.503143633838!2d14.35894587680981!3d41.341416371305755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a617ca5a29b77%3A0x18c851462ea47b41!2sLa%20Piccola%20Accademia!5e0!3m2!1sit!2sit!4v1756649802593!5m2!1sit!2sit"
-                    width="300" height="250" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                <div class="flex justify-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.503143633838!2d14.35894587680981!3d41.341416371305755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a617ca5a29b77%3A0x18c851462ea47b41!2sLa%20Piccola%20Accademia!5e0!3m2!1sit!2sit!4v1756649802593!5m2!1sit!2sit"
+                        class="rounded-xl shadow-lg w-full max-w-lg h-64" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
 
-            <div class="row mt-4 text-center scritta-nascosta shadow">
-                <h1 class="decorative-text pt-2 mb-5 display-2" style="color: rgb(164, 143, 193);">Galleria</h1>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/prima.jpg" class="img-colonna" loading="lazy">
+            <!-- Galleria preview -->
+            <section class="scritta-nascosta text-center px-6 py-14">
+                <h2 class="decorative-text text-4xl md:text-5xl text-lavender mb-8">Galleria</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="img/prima.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/seconda.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/terza.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/quarta.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/quinta.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/sesta.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/catia.JPG" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
+                    <img src="img/giorgia.JPG" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
                 </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/seconda.jpg" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/terza.jpg" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/quarta.jpg" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/quinta.jpg" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/sesta.jpg" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/catia.JPG" class="img-colonna" loading="lazy">
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <img src="img/giorgia.JPG" class="img-colonna" loading="lazy">
-                </div>
-            </div>
+                <a href="galleria.html" class="inline-block mt-8 normal-text text-teal font-semibold hover:text-lavender transition">
+                    Vedi tutta la galleria &rarr;
+                </a>
+            </section>
 
-            <div class="row">
-                <!-- Colonna Prenota -->
-                <div class="col-md-6 p-4 mt-3 scritta-nascosta shadow">
-                    <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193); font-size: 40px;">Iscriviti</h1>
-                    <p class="normal-text fs-4 fs-md-2" style="color: rgb(0, 88, 108);">
-                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci. <br>
+            <!-- Iscriviti + Social -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14 bg-lavlight/50">
+                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="decorative-text text-3xl text-lavender mb-4">Iscriviti</h2>
+                    <p class="normal-text text-xl text-teal mb-4">
+                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
                     </p>
-                    <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="normal-text fs-4 fs-md-2"
-                        style="color: rgb(0, 88, 108);">
-                        Vai alla pagina di prenotazione
-                    </a>
-                    <br>
-                    <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="normal-text fs-4"
-                        style="color: rgb(0, 88, 108);">
-                        Prenota una lezione di prova gratuita
-                    </a>
-                    <br>
-                    <a href="prenotaPilates.html" class="normal-text fs-4" style="color: rgb(0, 88, 108);">
-                        Prenota una lezione di Pilates Reformer
-                    </a>
-                </div>
-                <!-- Colonna Social -->
-                <div class="col-md-6 p-4 mt-3 shadow scritta-nascosta">
-                    <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193); font-size: 40px;">Seguici sui
-                        social</h1>
-                    <div class="mt-3 d-flex gap-3">
-                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA=="
-                            class="text-white fs-2"><i class="bi bi-instagram" style="color: rgb(0, 88, 108);"></i></a>
-                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-white fs-2"><i
-                                class="bi bi-facebook" style="color: rgb(0, 88, 108);"></i></a>
+                    <div class="flex flex-col gap-2 normal-text text-lg">
+                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal hover:text-lavender transition">
+                            Vai alla pagina di prenotazione
+                        </a>
+                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal hover:text-lavender transition">
+                            Prenota una lezione di prova gratuita
+                        </a>
+                        <a href="prenotaPilates.html" class="text-teal hover:text-lavender transition">
+                            Prenota una lezione di Pilates Reformer
+                        </a>
                     </div>
                 </div>
-            </div>
+                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="decorative-text text-3xl text-lavender mb-4">Seguici sui social</h2>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA==" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </section>
 
-            <div class="row scritta-nascosta shadow mt-4 mb-4 p-4 text-center">
-                <div class="normal-text" style="color: rgb(0, 88, 108); font-size: 25px;">
-                    <h1 class="decorative-text pt-2" style="color: rgb(164, 143, 193); font-size: 40px;">Info e Contatti
-                    </h1>
+            <!-- Info e contatti -->
+            <section class="scritta-nascosta text-center px-6 py-14">
+                <h2 class="decorative-text text-3xl text-lavender mb-4">Info e Contatti</h2>
+                <p class="normal-text text-xl text-teal">
                     Segreteria: +39 3272365497 <br>
                     Loredana Mattei: +39 3383298014
-                </div>
-            </div>
+                </p>
+            </section>
 
-            <footer class="text-center mt-5 mb-4">
-                <div class="d-flex justify-content-center align-items-center gap-2">
-                    <span style="color: rgb(164, 143, 193);">Powered by</span>
-                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="img-fluid" style="max-width: 100px;">
+            <footer class="text-center py-8 border-t border-lavlight">
+                <div class="flex justify-center items-center gap-2">
+                    <span class="normal-text text-lavender">Powered by</span>
+                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]">
                 </div>
             </footer>
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>
