@@ -1,234 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I Corsi | La Piccola Accademia</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logoAccademia.png" type="image/png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logoAccademia.png" type="image/png" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { teal: '#00586c', lavender: '#a48fc1', lavlight: '#f4f0fa' },
-                    fontFamily: { decorative: ['Balistone', 'serif'], body: ['Butler', 'serif'] },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: "#00586c",
+              lavender: "#a48fc1",
+              lavlight: "#f4f0fa",
+            },
+            fontFamily: {
+              decorative: ["Balistone", "serif"],
+              body: ["Butler", "serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-body bg-lavender">
+  <body class="font-body bg-lavender">
     <div class="min-h-screen">
-        <div class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl">
+      <div
+        class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl"
+      >
+        <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+          <div class="flex items-center justify-between px-4 md:px-8 py-4">
+            <a href="index.html" class="decorative-text text-2xl text-lavender"
+              >La Piccola Accademia</a
+            >
 
-            <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
-                <div class="flex items-center justify-between px-4 md:px-8 py-4">
-                    <a href="index.html" class="decorative-text text-2xl text-lavender">La Piccola Accademia</a>
+            <button
+              id="menuBtn"
+              class="lg:hidden text-teal focus:outline-none"
+              aria-label="Apri menu"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
 
-                    <button id="menuBtn" class="lg:hidden text-teal focus:outline-none" aria-label="Apri menu">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+            <ul class="hidden lg:flex gap-6 items-center normal-text">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="chi-siamo.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-lavender font-semibold border-b-2 border-lavender pb-1"
+                  >Corsi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="galleria.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                    <ul class="hidden lg:flex gap-6 items-center normal-text">
-                        <li><a href="index.html" class="text-teal font-semibold hover:text-lavender transition">Home</a></li>
-                        <li><a href="chi-siamo.html" class="text-teal font-semibold hover:text-lavender transition">Chi Siamo</a></li>
-                        <li><a href="#" class="text-lavender font-semibold border-b-2 border-lavender pb-1">Corsi</a></li>
-                        <li><a href="galleria.html" class="text-teal font-semibold hover:text-lavender transition">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold hover:text-lavender transition">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold hover:text-lavender transition">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition">Pilates Reformer</a></li>
-                    </ul>
-                </div>
+          <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a href="index.html" class="text-teal font-semibold block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="chi-siamo.html" class="text-teal font-semibold block"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lavender font-semibold block">Corsi</a>
+              </li>
+              <li>
+                <a href="galleria.html" class="text-teal font-semibold block"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold block"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold block"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="text-teal font-semibold block"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-                <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
-                    <ul class="flex flex-col gap-3">
-                        <li><a href="index.html" class="text-teal font-semibold block">Home</a></li>
-                        <li><a href="chi-siamo.html" class="text-teal font-semibold block">Chi Siamo</a></li>
-                        <li><a href="#" class="text-lavender font-semibold block">Corsi</a></li>
-                        <li><a href="galleria.html" class="text-teal font-semibold block">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold block">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold block">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="text-teal font-semibold block">Pilates Reformer</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="md:hidden flex justify-center py-6">
-                <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="max-h-40">
-            </div>
-
-            <section class="scritta-nascosta text-center px-6 py-14">
-                <h1 class="decorative-text text-4xl md:text-5xl text-lavender mb-6">I Corsi</h1>
-                <p class="normal-text text-xl text-teal max-w-3xl mx-auto">
-                    Presso la nostra scuola la danza è intesa come <span class="font-bold">arte, disciplina e
-                        strumento di crescita personale.</span>
-                    I corsi sono pensati per tutte le età e i livelli, dai
-                    bambini agli adulti, e offrono un percorso formativo che unisce tecnica, espressività
-                    e benessere fisico. Un ambiente accogliente e qualificato, dove ogni allievo può scoprire
-                    il piacere del movimento e coltivare la propria passione.
-                </p>
-            </section>
-
-            <section class="scritta-nascosta bg-teal px-6 py-14">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="img/diciannovesima.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
-                    <img src="img/ventesima.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
-                    <img src="img/ventunesima.jpg" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
-                    <img src="img/ventiduesima.png" class="rounded-xl shadow-md object-cover h-48 w-full" loading="lazy">
-                </div>
-            </section>
-
-            <section class="scritta-nascosta px-6 py-14">
-                <h2 class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10">La Nostra Offerta</h2>
-
-                <ul class="max-w-4xl mx-auto space-y-4">
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Giocodanza&reg; (5–7 anni)</strong>
-                            <img src="img/giocoDanza.webp" alt="logo giocodanza" class="max-w-[200px] max-h-[70px] mt-3 mb-3 rounded"><br>
-                            Un percorso ludico ed espressivo che introduce i più piccoli al movimento danzato, sviluppando
-                            coordinazione, musicalità e fantasia.<br>
-                            <em>Insegnanti: Loredana Mattei e Sonia Pelosi</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Tecnica Propedeutica</strong><br>
-                            Preparazione tecnica e motoria per bambini che vogliono avvicinarsi alla danza classica, con
-                            esercizi mirati allo sviluppo della postura e della disciplina.<br>
-                            <em>Insegnanti: Loredana Mattei</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Danza Classica</strong><br>
-                            Studio della tecnica accademica del balletto, con attenzione alla precisione, alla grazia e alla
-                            forza espressiva.<br>
-                            <em>Insegnante: Loredana Mattei</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Danza Classica per Adulti</strong><br>
-                            Un corso pensato per adulti, anche principianti, che desiderano avvicinarsi alla danza classica
-                            o riscoprirla con consapevolezza e passione.<br>
-                            <em>Insegnante: Loredana Mattei</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Lyrical Jazz</strong><br>
-                            Energia, ritmo e tecnica si fondono in uno stile dinamico e coinvolgente, ideale per chi ama
-                            esprimersi attraverso il movimento.<br>
-                            <em>Insegnante: Loredana Mattei</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Baby Modern (6–9 anni)</strong><br>
-                            Un corso divertente e creativo che introduce i bambini al mondo della danza moderna, stimolando
-                            espressività e coordinazione.<br>
-                            <em>Insegnante: Fabiana Porto</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Modern Contemporary</strong><br>
-                            Un viaggio tra tecnica e libertà espressiva, dove il corpo racconta emozioni attraverso
-                            movimenti fluidi e intensi.<br>
-                            <em>Insegnante: Alessandro Cerqua</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Danza Contemporanea</strong><br>
-                            Punta a superare la rigidità accademica della danza classica cercando un linguaggio più vicino
-                            alla realtà, alle emozioni e alle sensazioni senza tralasciare la tecnica.<br>
-                            <em>Insegnante: Luigi Fortunato</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Flamenco</strong><br>
-                            Corso aperto a tutti: dai più piccoli agli adulti, principianti e non. Tecnica, ritmo ed
-                            emozione per vivere la danza con grinta e cuore.<br>
-                            <em>Insegnante: Alessandro Cerqua</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Hip Hop</strong><br>
-                            Stile urbano e potente, perfetto per chi ama il ritmo, la creatività e l'energia della cultura
-                            street.<br>
-                            <em>Insegnante: Frank Polvere</em>
-                        </div>
-                    </li>
-                    <li class="course-item flex gap-3 p-4 rounded-xl">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <div class="normal-text text-lg text-teal">
-                            <strong>Pilates Matwork e Pilates reformer</strong><br>
-                            Un programma dolce e mirato per migliorare postura, mobilità e benessere fisico.<br>
-                            <em>Insegnante: Sonia Pelosi</em>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14 bg-lavlight/50">
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Iscriviti</h2>
-                    <p class="normal-text text-xl text-teal mb-4">
-                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
-                    </p>
-                    <div class="flex flex-col gap-2 normal-text text-lg">
-                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal hover:text-lavender transition">Vai alla pagina di prenotazione</a>
-                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal hover:text-lavender transition">Prenota una lezione di prova gratuita</a>
-                        <a href="prenotaPilates.html" class="text-teal hover:text-lavender transition">Prenota una lezione di Pilates Reformer</a>
-                    </div>
-                </div>
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Seguici sui social</h2>
-                    <div class="flex gap-4">
-                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA==" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-facebook"></i></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="scritta-nascosta text-center px-6 py-14">
-                <h2 class="decorative-text text-3xl text-lavender mb-4">Info e Contatti</h2>
-                <p class="normal-text text-xl text-teal">
-                    Segreteria: +39 3272365497 <br>
-                    Loredana Mattei: +39 3383298014
-                </p>
-            </section>
-
-            <footer class="text-center py-8 border-t border-lavlight">
-                <div class="flex justify-center items-center gap-2">
-                    <span class="normal-text text-lavender">Powered by</span>
-                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]">
-                </div>
-            </footer>
+        <div class="md:hidden flex justify-center py-6">
+          <img
+            src="img/logoAccademia.png"
+            alt="Logo La Piccola Accademia"
+            class="max-h-40"
+          />
         </div>
-    </div>
-</body>
-<script src="script.js"></script>
 
+        <section class="scritta-nascosta text-center px-6 py-14">
+          <h1 class="decorative-text text-4xl md:text-5xl text-lavender mb-6">
+            I Corsi
+          </h1>
+          <p class="normal-text text-xl text-teal max-w-3xl mx-auto">
+            Presso la nostra scuola la danza è intesa come
+            <span class="font-bold"
+              >arte, disciplina e strumento di crescita personale.</span
+            >
+            I corsi sono pensati per tutte le età e i livelli, dai bambini agli
+            adulti, e offrono un percorso formativo che unisce tecnica,
+            espressività e benessere fisico. Un ambiente accogliente e
+            qualificato, dove ogni allievo può scoprire il piacere del movimento
+            e coltivare la propria passione.
+          </p>
+        </section>
+
+        <section class="scritta-nascosta bg-teal px-6 py-14">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img
+              src="img/diciannovesima.jpg"
+              class="rounded-xl shadow-md object-cover h-48 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/ventesima.jpg"
+              class="rounded-xl shadow-md object-cover h-48 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/ventunesima.jpg"
+              class="rounded-xl shadow-md object-cover h-48 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/ventiduesima.png"
+              class="rounded-xl shadow-md object-cover h-48 w-full"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <section class="scritta-nascosta px-6 py-14">
+          <h2
+            class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10"
+          >
+            La Nostra Offerta
+          </h2>
+
+          <ul class="max-w-4xl mx-auto space-y-4">
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Giocodanza&reg; (5–7 anni)</strong>
+                <img
+                  src="img/giocoDanza.webp"
+                  alt="logo giocodanza"
+                  class="max-w-[200px] max-h-[70px] mt-3 mb-3 rounded"
+                /><br />
+                Un percorso ludico ed espressivo che introduce i più piccoli al
+                movimento danzato, sviluppando coordinazione, musicalità e
+                fantasia.<br />
+                <em>Insegnanti: Loredana Mattei e Sonia Pelosi</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Tecnica Propedeutica</strong><br />
+                Preparazione tecnica e motoria per bambini che vogliono
+                avvicinarsi alla danza classica, con esercizi mirati allo
+                sviluppo della postura e della disciplina.<br />
+                <em>Insegnanti: Loredana Mattei</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Danza Classica</strong><br />
+                Studio della tecnica accademica del balletto, con attenzione
+                alla precisione, alla grazia e alla forza espressiva.<br />
+                <em>Insegnante: Loredana Mattei</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Danza Classica per Adulti</strong><br />
+                Un corso pensato per adulti, anche principianti, che desiderano
+                avvicinarsi alla danza classica o riscoprirla con consapevolezza
+                e passione.<br />
+                <em>Insegnante: Loredana Mattei</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Lyrical Jazz</strong><br />
+                Energia, ritmo e tecnica si fondono in uno stile dinamico e
+                coinvolgente, ideale per chi ama esprimersi attraverso il
+                movimento.<br />
+                <em>Insegnante: Loredana Mattei</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Baby Modern (6–9 anni)</strong><br />
+                Un corso divertente e creativo che introduce i bambini al mondo
+                della danza moderna, stimolando espressività e coordinazione.<br />
+                <em>Insegnante: Fabiana Porto</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Modern Contemporary</strong><br />
+                Un viaggio tra tecnica e libertà espressiva, dove il corpo
+                racconta emozioni attraverso movimenti fluidi e intensi.<br />
+                <em>Insegnante: Alessandro Cerqua</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Danza Contemporanea</strong><br />
+                Punta a superare la rigidità accademica della danza classica
+                cercando un linguaggio più vicino alla realtà, alle emozioni e
+                alle sensazioni senza tralasciare la tecnica.<br />
+                <em>Insegnante: Luigi Fortunato</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Flamenco</strong><br />
+                Corso aperto a tutti: dai più piccoli agli adulti, principianti
+                e non. Tecnica, ritmo ed emozione per vivere la danza con grinta
+                e cuore.<br />
+                <em>Insegnante: Alessandro Cerqua</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Hip Hop</strong><br />
+                Stile urbano e potente, perfetto per chi ama il ritmo, la
+                creatività e l'energia della cultura street.<br />
+                <em>Insegnante: Frank Polvere</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Pilates Matwork e Pilates reformer</strong><br />
+                Un programma dolce e mirato per migliorare postura, mobilità e
+                benessere fisico.<br />
+                <em>Insegnante: Sonia Pelosi</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Heels (dai 10 anni in poi)</strong><br />
+                Corso dedicato alla tecnica su tacco, che unisce sensualità,
+                precisione e controllo del corpo attraverso un lavoro su
+                portamento, isolamenti e movimento fluido. Adatto a chi vuole
+                sviluppare sicurezza scenica ed espressività in uno stile
+                contemporaneo e versatile.<br />
+                <em>Insegnanti: Claudia Lazzari</em>
+              </div>
+            </li>
+            <li class="course-item flex gap-3 p-4 rounded-xl">
+              <i class="bi bi-star-fill text-lavender mt-1"></i>
+              <div class="normal-text text-lg text-teal">
+                <strong>Passo a due</strong><br />
+                Studio della tecnica classica del pas de deux, con particolare
+                attenzione a coordinazione, fiducia reciproca e precisione nelle
+                prese e nei sostegni tra i danzatori. Un percorso pensato per
+                chi desidera affinare l'interpretazione e l'armonia scenica in
+                coppia, secondo i principi del Metodo Vaganova.<br />
+                <em>Insegnanti: Marco Protano</em>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14 bg-lavlight/50"
+        >
+          <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Iscriviti
+            </h2>
+            <p class="normal-text text-xl text-teal mb-4">
+              Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
+            </p>
+            <div class="flex flex-col gap-2 normal-text text-lg">
+              <a
+                href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                class="text-teal hover:text-lavender transition"
+                >Vai alla pagina di prenotazione</a
+              >
+              <a
+                href="https://forms.gle/ec81f6NGSHMheNuv6"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di prova gratuita</a
+              >
+              <a
+                href="prenotaPilates.html"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di Pilates Reformer</a
+              >
+            </div>
+          </div>
+          <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Seguici sui social
+            </h2>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA=="
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/laPiccolAccademia"
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="scritta-nascosta text-center px-6 py-14">
+          <h2 class="decorative-text text-3xl text-lavender mb-4">
+            Info e Contatti
+          </h2>
+          <p class="normal-text text-xl text-teal">
+            Segreteria: +39 3272365497 <br />
+            Loredana Mattei: +39 3383298014
+          </p>
+        </section>
+
+        <footer class="text-center py-8 border-t border-lavlight">
+          <div class="flex justify-center items-center gap-2">
+            <span class="normal-text text-lavender">Powered by</span>
+            <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]" />
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>

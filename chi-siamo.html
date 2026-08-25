@@ -1,185 +1,616 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi Siamo | La Piccola Accademia</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logoAccademia.png" type="image/png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logoAccademia.png" type="image/png" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { teal: '#00586c', lavender: '#a48fc1', lavlight: '#f4f0fa' },
-                    fontFamily: { decorative: ['Balistone', 'serif'], body: ['Butler', 'serif'] },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: "#00586c",
+              lavender: "#a48fc1",
+              lavlight: "#f4f0fa",
+            },
+            fontFamily: {
+              decorative: ["Balistone", "serif"],
+              body: ["Butler", "serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-body bg-lavender">
+  <body class="font-body bg-lavender">
     <div class="min-h-screen">
-        <div class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl">
+      <div
+        class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl"
+      >
+        <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+          <div class="flex items-center justify-between px-4 md:px-8 py-4">
+            <a href="index.html" class="decorative-text text-2xl text-lavender"
+              >La Piccola Accademia</a
+            >
 
-            <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
-                <div class="flex items-center justify-between px-4 md:px-8 py-4">
-                    <a href="index.html" class="decorative-text text-2xl text-lavender">La Piccola Accademia</a>
+            <button
+              id="menuBtn"
+              class="lg:hidden text-teal focus:outline-none"
+              aria-label="Apri menu"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
 
-                    <button id="menuBtn" class="lg:hidden text-teal focus:outline-none" aria-label="Apri menu">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+            <ul class="hidden lg:flex gap-6 items-center normal-text">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-lavender font-semibold border-b-2 border-lavender pb-1"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="i-corsi.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Corsi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="galleria.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                    <ul class="hidden lg:flex gap-6 items-center normal-text">
-                        <li><a href="index.html" class="text-teal font-semibold hover:text-lavender transition">Home</a></li>
-                        <li><a href="#" class="text-lavender font-semibold border-b-2 border-lavender pb-1">Chi Siamo</a></li>
-                        <li><a href="i-corsi.html" class="text-teal font-semibold hover:text-lavender transition">Corsi</a></li>
-                        <li><a href="galleria.html" class="text-teal font-semibold hover:text-lavender transition">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold hover:text-lavender transition">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold hover:text-lavender transition">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition">Pilates Reformer</a></li>
-                    </ul>
-                </div>
+          <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a href="index.html" class="text-teal font-semibold block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lavender font-semibold block"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a href="i-corsi.html" class="text-teal font-semibold block"
+                  >Corsi</a
+                >
+              </li>
+              <li>
+                <a href="galleria.html" class="text-teal font-semibold block"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold block"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold block"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="text-teal font-semibold block"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-                <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
-                    <ul class="flex flex-col gap-3">
-                        <li><a href="index.html" class="text-teal font-semibold block">Home</a></li>
-                        <li><a href="#" class="text-lavender font-semibold block">Chi Siamo</a></li>
-                        <li><a href="i-corsi.html" class="text-teal font-semibold block">Corsi</a></li>
-                        <li><a href="galleria.html" class="text-teal font-semibold block">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold block">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold block">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="text-teal font-semibold block">Pilates Reformer</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- LOGO mobile -->
-            <div class="md:hidden flex justify-center py-6">
-                <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="max-h-40">
-            </div>
-
-            <!-- Direttrice artistica -->
-            <section class="scritta-nascosta px-6 py-14">
-                <h1 class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10">La direttrice artistica</h1>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <p class="normal-text text-xl text-teal leading-relaxed">
-                        <span class="font-bold">Loredana Mattei</span>, diplomata in danza classica nel'85 presso
-                        C.S.S.C di Benevento, dopo innumerevoli e continui corsi di aggiornamento e perfezionamento
-                        sulla metodologia didattica in Italia e all'estero, dà vita a "La Piccola Accademia". Numerosi
-                        i titoli professionali alle spalle fra cui la laurea in scienze motorie. Dal 2019 è insegnante
-                        certificata Giocodanza&reg;.
-                    </p>
-                    <div class="flex justify-center">
-                        <img src="img/loredanaMattei.jpeg" alt="Foto Loredana Mattei"
-                            class="rounded-2xl shadow-xl max-w-[320px]" loading="lazy">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Corpo docenti -->
-            <section class="scritta-nascosta px-6 py-14 bg-lavlight/50">
-                <h2 class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10">Il Corpo Docenti</h2>
-                <ul class="space-y-6 max-w-4xl mx-auto">
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-heart-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Luigi Fortunato</span> - Diplomato presso A.N.D di Roma, ha collezionato importanti esperienza
-                            negli studi Mediaset come ballerino professionista.</span>
-                    </li>
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-diamond-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Frank Polvere</span> - Ballerino e coreografo di hip-hop e reggaetton, ha partecipato a diversi
-                            videoclip musicali con artisti internazionali e si è esibito anche sul palco
-                            di "Italia's Got Talent".</span>
-                    </li>
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Sonia Pelosi</span> - Diplomata presso La Piccola Accademia nel 2001, istruttrice di Pilates
-                            e specializzata in ginnastica rieducativa posturale. Insegnante certificata Giocodanza&reg;.</span>
-                    </li>
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Alessandro Cerqua</span> - diplomato alla Fondazione Lyceum Mara Fusco in classico, modern e flamenco,
-                            ha perfezionato la sua formazione a New York in prestigiosi centri di danza come Alvin Ailey e
-                            Broadway Dance Center, entrando nel cast ufficiale del musical “Tony & Tina’s Wedding”.
-                            Vincitore di premi e borse di studio internazionali, tra cui Youth American Grand Prix e
-                            Concurso Flamenco Puro a Jerez, ha ricevuto riconoscimenti in Italia e all’estero.
-                            Oggi è coreografo, insegnante e ballerino professionista specializzato in modern e flamenco.</span>
-                    </li>
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Fabiana Porto</span> - Assistente corsi preparatori danza classica.</span>
-                    </li>
-                    <li class="normal-text text-lg text-teal flex gap-3">
-                        <i class="bi bi-star-fill text-lavender mt-1"></i>
-                        <span><span class="font-bold">Chiara Nacca</span> - Assistente corsi danza contemporanea.</span>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Galleria docenti -->
-            <section class="scritta-nascosta bg-teal px-6 py-14">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="img/settima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/ottava.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/nona.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/decima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/undicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/dodicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/tredicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/quattordicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/quindicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/sedicesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/diciassettesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                    <img src="img/diciottesima.jpg" class="rounded-xl shadow-md object-cover h-40 w-full" loading="lazy">
-                </div>
-            </section>
-
-            <!-- Iscriviti + Social -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14">
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Iscriviti</h2>
-                    <p class="normal-text text-xl text-teal mb-4">
-                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
-                    </p>
-                    <div class="flex flex-col gap-2 normal-text text-lg">
-                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal hover:text-lavender transition">Vai alla pagina di prenotazione</a>
-                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal hover:text-lavender transition">Prenota una lezione di prova gratuita</a>
-                        <a href="prenotaPilates.html" class="text-teal hover:text-lavender transition">Prenota una lezione di Pilates Reformer</a>
-                    </div>
-                </div>
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Seguici sui social</h2>
-                    <div class="flex gap-4">
-                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA==" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-facebook"></i></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="scritta-nascosta text-center px-6 py-14">
-                <h2 class="decorative-text text-3xl text-lavender mb-4">Info e Contatti</h2>
-                <p class="normal-text text-xl text-teal">
-                    Segreteria: +39 3272365497 <br>
-                    Loredana Mattei: +39 3383298014
-                </p>
-            </section>
-
-            <footer class="text-center py-8 border-t border-lavlight">
-                <div class="flex justify-center items-center gap-2">
-                    <span class="normal-text text-lavender">Powered by</span>
-                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]">
-                </div>
-            </footer>
+        <!-- LOGO mobile -->
+        <div class="md:hidden flex justify-center py-6">
+          <img
+            src="img/logoAccademia.png"
+            alt="Logo La Piccola Accademia"
+            class="max-h-40"
+          />
         </div>
-    </div>
-</body>
-<script src="script.js"></script>
 
+        <!-- Direttrice artistica -->
+        <section class="scritta-nascosta px-6 py-14">
+          <h1
+            class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10"
+          >
+            La direttrice artistica
+          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <p class="normal-text text-xl text-teal leading-relaxed">
+              <span class="font-bold">Loredana Mattei</span>, diplomata in danza
+              classica nel'85 presso C.S.S.C di Benevento, dopo innumerevoli e
+              continui corsi di aggiornamento e perfezionamento sulla
+              metodologia didattica in Italia e all'estero, dà vita a "La
+              Piccola Accademia". Numerosi i titoli professionali alle spalle
+              fra cui la laurea in scienze motorie. Dal 2019 è insegnante
+              certificata Giocodanza&reg;.
+            </p>
+            <div class="flex justify-center">
+              <img
+                src="img/loredanaMattei.jpeg"
+                alt="Foto Loredana Mattei"
+                class="rounded-2xl shadow-xl max-w-[320px]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Corpo docenti -->
+        <section class="scritta-nascosta px-6 py-14 bg-lavlight/50">
+          <h2
+            class="decorative-text text-center text-4xl md:text-5xl text-lavender mb-10"
+          >
+            Il Corpo Docenti
+          </h2>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          >
+            <!-- Card Luigi Fortunato -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/luigiFortunato.jpeg"
+                alt="Foto Luigi Fortunato"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Luigi Fortunato
+              </h3>
+              <p class="normal-text text-lavender mb-3">Danza Contemporanea</p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Diplomato presso A.N.D di Roma, ha collezionato importanti
+                esperienze negli studi Mediaset come ballerino professionista.
+              </div>
+            </button>
+
+            <!-- Card Frank Polvere -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/frankPolvere.jpeg"
+                alt="Foto Frank Polvere"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Frank Polvere
+              </h3>
+              <p class="normal-text text-lavender mb-3">Hip Hop</p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Ballerino e coreografo italoamericano, è dotato di uno stile
+                tutto suo, contaminato da diverse discipline, in cui amalgama
+                tutto ciò che può muovere il corpo, lasciando che la musica ne
+                prenda l’anima. Ha ballato per artisti internazionali come Snoop
+                Dogg, Pitbull, Bob Sinclar e, nel luglio 2024, per il re della
+                dembow, El Alfa, durante la sua esperienza in Italia. Sono
+                numerosi anche gli artisti italiani con cui ha collaborato come
+                ballerino e coreografo, tra cui Cecilia Gayle, la regina del
+                Tipitipitero, El Pampa e artisti come Fred De Palma, The Kolors,
+                Guè, Luchè e Geolier. Ha lavorato in Rai e Mediaset come
+                ballerino ed è stato coreografo del programma “Domenica Live”,
+                condotto da Barbara D’Urso su Canale 5. Attualmente gira tutta
+                Italia come ballerino, coreografo e stagista, continuando a
+                portare il suo stile e la sua esperienza sui palcoscenici di
+                tutta Italia..
+              </div>
+            </button>
+
+            <!-- Card Sonia Pelosi -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/soniaPelosi.jpeg"
+                alt="Foto Sonia Pelosi"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Sonia Pelosi
+              </h3>
+              <p class="normal-text text-lavender mb-3">
+                Pilates &amp; Giocodanza&reg;
+              </p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Diplomata in danza classica e moderna alla Piccola Accademia, ha
+                perfezionato la sua formazione con maestri di rilievo
+                internazionale, tra cui il metodo russo Vaganova con la
+                professoressa Marit Bech e stage di tecnica classica con
+                Antonina Randazzo, docente della scuola di ballo del Teatro San
+                Carlo di Napoli. Ha ampliato le sue competenze anche nel fitness
+                e nel benessere, conseguendo diplomi come istruttrice di
+                Pilates, Zumba, Suspension Training e Kardio Kombat, ed è
+                Maestro Nazionale CSEN di Giocodanza&reg;. Ha lavorato come
+                coreografa nei villaggi turistici Valtur e come insegnante
+                presso diverse palestre e accademie tra Benevento e Caserta,
+                oltre a essere stata esperta nel progetto ministeriale Agenda
+                Sud "Storie danzanti". Oggi è insegnante di danza classica e
+                moderna, Giocodanza&reg; e Pilates, unendo tecnica accademica e
+                approccio al benessere del corpo.
+              </div>
+            </button>
+
+            <!-- Card Alessandro Cerqua -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/alessandroCerqua.jpeg"
+                alt="Foto Alessandro Cerqua"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Alessandro Cerqua
+              </h3>
+              <p class="normal-text text-lavender mb-3">
+                Modern Contemporary &amp; Flamenco
+              </p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Diplomato alla Fondanzione Lyceum Mara Fusco in classico modern
+                e flamenco dagli insegnati Mara Fusco, Laura Perez, Ferdinando
+                Arenella e Raffaella Caianiello. Continua i suoi studi a New
+                York in centri specializzati quali Steps on Broadway, peridance,
+                alvin ailey, Broadway dance center dove entra nel cast ufficiale
+                del celebre musical di Broadway “tony & tina’s wedding”;
+                Vincitore di premi internazionali e borse di studio
+                internazionali quali Youth American Grand Prix al David
+                Hitchcock theater New York, concurso flamenco puro a jerez de la
+                frontera, 5 borse di studio per i prestigiosi centri di danza
+                americani, premio Carlo Gesualdo e campamento flamenco 2025 con
+                30 insegnati di flamenco di fama mondiale. Ad oggi coreografo,
+                insegnate e ballerino professionista di modern e flamenco.
+              </div>
+            </button>
+
+            <!-- Card Marco Protano-->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/marcoProtano.jpeg"
+                alt="Foto Marco Protano"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Marco Protano
+              </h3>
+              <p class="normal-text text-lavender mb-3">
+                Passo a due &amp; Repertorio
+              </p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Nato a Napoli, si è formato alla Scuola di Ballo del Teatro San
+                Carlo, diretta da Anna Razzi, lavorando con maestri di fama
+                internazionale come Elisabetta Terabust, Carmen Panader, Antonio
+                Vitale, Riccardo Riccardi, Luc Bouy e Ricardo Nuñez. Ha danzato
+                in produzioni della Scuola di Ballo del San Carlo come "La Bella
+                Addormentata", "La Favola di Biancaneve" e "Il Principe Igor", e
+                ha collaborato con la Compagnia di Balletto diretta da Mara
+                Fusco e con quella diretta da Bruno Fusco, esibendosi anche a
+                Washington presso la Casa Italiana. Dal 2019 approfondisce ogni
+                anno il Metodo Vaganova con un Master di Alta Formazione a
+                Firenze, studiando con Marina Vasilieva, Presidente
+                dell'Accademia Vaganova di San Pietroburgo. Dal 2013 dirige,
+                insieme a Martina Libro, il Centro Danza di Napoli, dedicandosi
+                alla formazione classica e moderna delle nuove generazioni di
+                danzatori.
+              </div>
+            </button>
+
+            <!-- Card Claudia Lazzari -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/insegnanti/claudiaLazzari.png"
+                alt="Foto Claudia Lazzari"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Claudia Lazzari
+              </h3>
+              <p class="normal-text text-lavender mb-3">Heels</p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Diplomata in danza e formatasi tra Scienze della Comunicazione e
+                Corporate Communication e Media all'Università di Salerno, con
+                un Master in Cinema e Tv all'UNISOB, ha costruito un percorso
+                artistico che intreccia danza, recitazione e scrittura. Ha
+                danzato nei corpi di ballo di spettacoli e produzioni di
+                rilievo, tra cui il Carmen Russo Show, "Flashdance Il Musical"
+                per la regia e coreografia di Enzo Paolo Turchi, e le produzioni
+                di Massimiliano Gallo "Anni '90" e "Vesuvio: The Legend of Love"
+                con le coreografie di Ettore Squillace. Come attrice ha lavorato
+                in cortometraggi e serie tv, comparendo anche in produzioni
+                Netflix come "La scuola" e in "Mare Fuori 6". È inoltre
+                scrittrice, con racconti e poesie premiati in concorsi letterari
+                e il romanzo "Starglow e il Libro del Noce" pubblicato da
+                Bookabook Editore. Oggi è insegnante di danza moderna e
+                contemporanea e di Heels, oltre che coreografa e interprete in
+                numerosi progetti teatrali e televisivi.
+              </div>
+            </button>
+
+            <!-- Card Fabiana Porto -->
+            <button
+              type="button"
+              class="teacher-card text-left bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center cursor-pointer"
+            >
+              <img
+                src="img/undicesima.jpg"
+                alt="Foto Fabiana Porto"
+                loading="lazy"
+                class="w-28 h-28 rounded-full object-cover shadow-md mb-4"
+              />
+              <h3 class="normal-text text-xl font-bold text-teal">
+                Fabiana Porto
+              </h3>
+              <p class="normal-text text-lavender mb-3">
+                Danza Classica (assistente)
+              </p>
+              <i
+                class="bi bi-chevron-down text-teal teacher-chevron transition-transform"
+              ></i>
+              <div
+                class="teacher-bio hidden mt-4 normal-text text-teal text-center"
+              >
+                Assistente corsi preparatori di danza classica.
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".teacher-card").forEach(function (card) {
+              card.addEventListener("click", function () {
+                const bio = card.querySelector(".teacher-bio");
+                const chevron = card.querySelector(".teacher-chevron");
+                bio.classList.toggle("hidden");
+                chevron.classList.toggle("rotate-180");
+              });
+            });
+          });
+        </script>
+
+        <!-- Galleria docenti -->
+        <section class="scritta-nascosta bg-teal px-6 py-14">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img
+              src="img/settima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/ottava.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/nona.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/decima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/undicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/dodicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/tredicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/quattordicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/quindicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/sedicesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/diciassettesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+            <img
+              src="img/diciottesima.jpg"
+              class="rounded-xl shadow-md object-cover h-40 w-full"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <!-- Iscriviti + Social -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14">
+          <div
+            class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight"
+          >
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Iscriviti
+            </h2>
+            <p class="normal-text text-xl text-teal mb-4">
+              Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
+            </p>
+            <div class="flex flex-col gap-2 normal-text text-lg">
+              <a
+                href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                class="text-teal hover:text-lavender transition"
+                >Vai alla pagina di prenotazione</a
+              >
+              <a
+                href="https://forms.gle/ec81f6NGSHMheNuv6"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di prova gratuita</a
+              >
+              <a
+                href="prenotaPilates.html"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di Pilates Reformer</a
+              >
+            </div>
+          </div>
+          <div
+            class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8 border border-lavlight"
+          >
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Seguici sui social
+            </h2>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA=="
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/laPiccolAccademia"
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="scritta-nascosta text-center px-6 py-14">
+          <h2 class="decorative-text text-3xl text-lavender mb-4">
+            Info e Contatti
+          </h2>
+          <p class="normal-text text-xl text-teal">
+            Segreteria: +39 3272365497 <br />
+            Loredana Mattei: +39 3383298014
+          </p>
+        </section>
+
+        <footer class="text-center py-8 border-t border-lavlight">
+          <div class="flex justify-center items-center gap-2">
+            <span class="normal-text text-lavender">Powered by</span>
+            <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]" />
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
