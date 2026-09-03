@@ -1,187 +1,387 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galleria | La Piccola Accademia</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logoAccademia.png" type="image/png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logoAccademia.png" type="image/png" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { teal: '#00586c', lavender: '#a48fc1', lavlight: '#f4f0fa' },
-                    fontFamily: { decorative: ['Balistone', 'serif'], body: ['Butler', 'serif'] },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: "#00586c",
+              lavender: "#a48fc1",
+              lavlight: "#f4f0fa",
+            },
+            fontFamily: {
+              decorative: ["Balistone", "serif"],
+              body: ["Butler", "serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-body bg-lavender">
+  <body class="font-body bg-lavender">
     <div class="min-h-screen">
-        <div class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl">
+      <div
+        class="mx-2 md:mx-6 lg:mx-10 bg-white rounded-2xl overflow-hidden shadow-2xl"
+      >
+        <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+          <div class="flex items-center justify-between px-4 md:px-8 py-4">
+            <a href="index.html" class="decorative-text text-2xl text-lavender"
+              >La Piccola Accademia</a
+            >
 
-            <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
-                <div class="flex items-center justify-between px-4 md:px-8 py-4">
-                    <a href="index.html" class="decorative-text text-2xl text-lavender">La Piccola Accademia</a>
+            <button
+              id="menuBtn"
+              class="lg:hidden text-teal focus:outline-none"
+              aria-label="Apri menu"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
 
-                    <button id="menuBtn" class="lg:hidden text-teal focus:outline-none" aria-label="Apri menu">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+            <ul class="hidden lg:flex gap-6 items-center normal-text">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="chi-siamo.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="i-corsi.html"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Corsi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-lavender font-semibold border-b-2 border-lavender pb-1"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold hover:text-lavender transition"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                    <ul class="hidden lg:flex gap-6 items-center normal-text">
-                        <li><a href="index.html" class="text-teal font-semibold hover:text-lavender transition">Home</a></li>
-                        <li><a href="chi-siamo.html" class="text-teal font-semibold hover:text-lavender transition">Chi Siamo</a></li>
-                        <li><a href="i-corsi.html" class="text-teal font-semibold hover:text-lavender transition">Corsi</a></li>
-                        <li><a href="#" class="text-lavender font-semibold border-b-2 border-lavender pb-1">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold hover:text-lavender transition">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold hover:text-lavender transition">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-lavender transition">Pilates Reformer</a></li>
-                    </ul>
-                </div>
+          <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a href="index.html" class="text-teal font-semibold block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="chi-siamo.html" class="text-teal font-semibold block"
+                  >Chi Siamo</a
+                >
+              </li>
+              <li>
+                <a href="i-corsi.html" class="text-teal font-semibold block"
+                  >Corsi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lavender font-semibold block"
+                  >Galleria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                  class="text-teal font-semibold block"
+                  >Iscriviti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://forms.gle/ec81f6NGSHMheNuv6"
+                  class="text-teal font-semibold block"
+                  >Lezione Gratuita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="prenotaPilates.html"
+                  class="text-teal font-semibold block"
+                  >Pilates Reformer</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-                <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 normal-text">
-                    <ul class="flex flex-col gap-3">
-                        <li><a href="index.html" class="text-teal font-semibold block">Home</a></li>
-                        <li><a href="chi-siamo.html" class="text-teal font-semibold block">Chi Siamo</a></li>
-                        <li><a href="i-corsi.html" class="text-teal font-semibold block">Corsi</a></li>
-                        <li><a href="#" class="text-lavender font-semibold block">Galleria</a></li>
-                        <li><a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal font-semibold block">Iscriviti</a></li>
-                        <li><a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal font-semibold block">Lezione Gratuita</a></li>
-                        <li><a href="prenotaPilates.html" class="text-teal font-semibold block">Pilates Reformer</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="md:hidden flex justify-center py-6">
-                <img src="img/logoAccademia.png" alt="Logo La Piccola Accademia" class="max-h-40">
-            </div>
-
-            <section class="scritta-nascosta text-center px-6 py-14">
-                <h1 class="decorative-text text-4xl md:text-5xl text-lavender mb-6">Galleria</h1>
-                <p class="normal-text text-xl text-teal max-w-3xl mx-auto">
-                    Un anno di impegno, passione e creatività raccontato attraverso i sorrisi,
-                    i movimenti e le emozioni dei nostri allievi. In questa galleria troverai alcuni dei
-                    momenti più belli del nostro saggio di fine anno: ricordi speciali
-                    da rivivere e condividere.
-                </p>
-            </section>
-
-            <section class="scritta-nascosta px-6 py-10">
-                <h2 class="decorative-text text-3xl md:text-4xl text-lavender mb-8 text-center">Anno accademico 2025/2026</h2>
-                <!-- Carosello immagini (Tailwind + JS) -->
-                <div id="carouselSaggio" class="relative max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl">
-                    <div class="relative h-64 sm:h-96">
-                        <img src="img/galleria/2025/1.webp" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Foto 1" loading="lazy">
-                        <img src="img/galleria/2025/18.webp" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" alt="Foto 2" loading="lazy">
-                        <img src="img/galleria/2025/3.webp" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" alt="Foto 3" loading="lazy">
-                        <img src="img/galleria/2025/4.webp" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" alt="Foto 4" loading="lazy">
-                    </div>
-                    <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-teal rounded-full w-10 h-10 flex items-center justify-center shadow">&#10094;</button>
-                    <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-teal rounded-full w-10 h-10 flex items-center justify-center shadow">&#10095;</button>
-                    <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                        <button class="w-2.5 h-2.5 rounded-full bg-white/70 dot-active"></button>
-                        <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
-                        <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
-                        <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="scritta-nascosta px-6 py-14">
-                <div id="galleria" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const galleria = document.getElementById("galleria");
-                        const totaleFoto = 68;
-                        const percorso = "img/galleria/2025/";
-
-                        for (let i = 5; i <= totaleFoto; i++) {
-                            const img = document.createElement("img");
-                            img.src = `${percorso}${i}.webp`;
-                            img.className = "rounded-xl shadow-md object-cover h-40 w-full";
-                            img.loading = "lazy";
-                            img.alt = `Foto ${i}`;
-                            galleria.appendChild(img);
-                        }
-
-                        // Simple carousel logic
-                        const carousel = document.getElementById("carouselSaggio");
-                        if (carousel) {
-                            const slides = carousel.querySelectorAll(".carousel-slide");
-                            const dots = carousel.querySelectorAll(".carousel-dots button");
-                            let current = 0;
-
-                            function showSlide(index) {
-                                slides.forEach((s, i) => s.classList.toggle("opacity-100", i === index));
-                                slides.forEach((s, i) => s.classList.toggle("opacity-0", i !== index));
-                                dots.forEach((d, i) => {
-                                    d.classList.toggle("bg-white/70", i === index);
-                                    d.classList.toggle("bg-white/40", i !== index);
-                                });
-                                current = index;
-                            }
-
-                            carousel.querySelector(".carousel-prev").addEventListener("click", () => {
-                                showSlide((current - 1 + slides.length) % slides.length);
-                            });
-                            carousel.querySelector(".carousel-next").addEventListener("click", () => {
-                                showSlide((current + 1) % slides.length);
-                            });
-                            dots.forEach((d, i) => d.addEventListener("click", () => showSlide(i)));
-
-                            setInterval(() => showSlide((current + 1) % slides.length), 5000);
-                        }
-                    });
-                </script>
-            </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14 bg-lavlight/50">
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Iscriviti</h2>
-                    <p class="normal-text text-xl text-teal mb-4">
-                        Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
-                    </p>
-                    <div class="flex flex-col gap-2 normal-text text-lg">
-                        <a href="https://forms.gle/dv9BEQCxvQ4omXiz6" class="text-teal hover:text-lavender transition">Vai alla pagina di prenotazione</a>
-                        <a href="https://forms.gle/ec81f6NGSHMheNuv6" class="text-teal hover:text-lavender transition">Prenota una lezione di prova gratuita</a>
-                        <a href="prenotaPilates.html" class="text-teal hover:text-lavender transition">Prenota una lezione di Pilates Reformer</a>
-                    </div>
-                </div>
-                <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
-                    <h2 class="decorative-text text-3xl text-lavender mb-4">Seguici sui social</h2>
-                    <div class="flex gap-4">
-                        <a href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA==" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/laPiccolAccademia" class="text-teal text-3xl hover:text-lavender transition"><i class="bi bi-facebook"></i></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="scritta-nascosta text-center px-6 py-14">
-                <h2 class="decorative-text text-3xl text-lavender mb-4">Info e Contatti</h2>
-                <p class="normal-text text-xl text-teal">
-                    Segreteria: +39 3272365497 <br>
-                    Loredana Mattei: +39 3383298014
-                </p>
-            </section>
-
-            <footer class="text-center py-8 border-t border-lavlight">
-                <div class="flex justify-center items-center gap-2">
-                    <span class="normal-text text-lavender">Powered by</span>
-                    <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]">
-                </div>
-            </footer>
+        <div class="md:hidden flex justify-center py-6">
+          <img
+            src="img/logoAccademia.png"
+            alt="Logo La Piccola Accademia"
+            class="max-h-40"
+          />
         </div>
-    </div>
-</body>
-<script src="script.js"></script>
 
+        <section class="scritta-nascosta text-center px-6 py-14">
+          <h1 class="decorative-text text-4xl md:text-5xl text-lavender mb-6">
+            Galleria
+          </h1>
+          <p class="normal-text text-xl text-teal max-w-3xl mx-auto">
+            Un anno di impegno, passione e creatività raccontato attraverso i
+            sorrisi, i movimenti e le emozioni dei nostri allievi. In questa
+            galleria troverai alcuni dei momenti più belli del nostro saggio di
+            fine anno: ricordi speciali da rivivere e condividere.
+          </p>
+        </section>
+
+        <section class="scritta-nascosta px-6 py-10">
+          <h2
+            class="decorative-text text-3xl md:text-4xl text-lavender mb-8 text-center"
+          >
+            Anno accademico 2025/2026
+          </h2>
+          <!-- Carosello immagini (Tailwind + JS) -->
+          <div
+            id="carouselSaggio"
+            class="relative max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl"
+          >
+            <div class="relative h-64 sm:h-96">
+              <img
+                src="img/galleria/1.webp"
+                class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
+                alt="Foto 1"
+                loading="lazy"
+              />
+              <img
+                src="img/galleria/18.webp"
+                class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+                alt="Foto 2"
+                loading="lazy"
+              />
+              <img
+                src="img/galleria/3.webp"
+                class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+                alt="Foto 3"
+                loading="lazy"
+              />
+              <img
+                src="img/galleria/4.webp"
+                class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+                alt="Foto 4"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-teal rounded-full w-10 h-10 flex items-center justify-center shadow"
+            >
+              &#10094;
+            </button>
+            <button
+              class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-teal rounded-full w-10 h-10 flex items-center justify-center shadow"
+            >
+              &#10095;
+            </button>
+            <div
+              class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"
+            >
+              <button
+                class="w-2.5 h-2.5 rounded-full bg-white/70 dot-active"
+              ></button>
+              <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
+              <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
+              <button class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="scritta-nascosta px-6 py-4">
+          <div
+            id="galleria"
+            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+          ></div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const galleria = document.getElementById("galleria");
+              const totaleFoto = 12;
+              const percorso = "img/galleria/";
+
+              for (let i = 5; i <= totaleFoto; i++) {
+                const img = document.createElement("img");
+                img.src = `${percorso}${i}.webp`;
+                img.className = "rounded-xl shadow-md object-cover h-40 w-full";
+                img.loading = "lazy";
+                img.alt = `Foto ${i}`;
+                galleria.appendChild(img);
+              }
+
+              // Simple carousel logic
+              const carousel = document.getElementById("carouselSaggio");
+              if (carousel) {
+                const slides = carousel.querySelectorAll(".carousel-slide");
+                const dots = carousel.querySelectorAll(".carousel-dots button");
+                let current = 0;
+
+                function showSlide(index) {
+                  slides.forEach((s, i) =>
+                    s.classList.toggle("opacity-100", i === index),
+                  );
+                  slides.forEach((s, i) =>
+                    s.classList.toggle("opacity-0", i !== index),
+                  );
+                  dots.forEach((d, i) => {
+                    d.classList.toggle("bg-white/70", i === index);
+                    d.classList.toggle("bg-white/40", i !== index);
+                  });
+                  current = index;
+                }
+
+                carousel
+                  .querySelector(".carousel-prev")
+                  .addEventListener("click", () => {
+                    showSlide((current - 1 + slides.length) % slides.length);
+                  });
+                carousel
+                  .querySelector(".carousel-next")
+                  .addEventListener("click", () => {
+                    showSlide((current + 1) % slides.length);
+                  });
+                dots.forEach((d, i) =>
+                  d.addEventListener("click", () => showSlide(i)),
+                );
+
+                setInterval(
+                  () => showSlide((current + 1) % slides.length),
+                  5000,
+                );
+              }
+            });
+          </script>
+
+          <div class="grid grid-cols-2 mb-6 justify-items-end">
+            <div></div>
+            <a
+              href="https://drive.google.com/drive/folders/1ikU_25KyRVtXU-fh2RdXivk2c8wzvQ3a?usp=sharing"
+              class="inline-block mt-8 normal-text text-teal font-semibold hover:text-lavender transition"
+            >
+              Galleria Completa &rarr;
+            </a>
+          </div>
+        </section>
+
+        <section
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-14 bg-lavlight/50"
+        >
+          <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Iscriviti
+            </h2>
+            <p class="normal-text text-xl text-teal mb-4">
+              Consulta le nostre proposte ed iscriviti ai corsi che preferisci.
+            </p>
+            <div class="flex flex-col gap-2 normal-text text-lg">
+              <a
+                href="https://forms.gle/dv9BEQCxvQ4omXiz6"
+                class="text-teal hover:text-lavender transition"
+                >Vai alla pagina di prenotazione</a
+              >
+              <a
+                href="https://forms.gle/ec81f6NGSHMheNuv6"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di prova gratuita</a
+              >
+              <a
+                href="prenotaPilates.html"
+                class="text-teal hover:text-lavender transition"
+                >Prenota una lezione di Pilates Reformer</a
+              >
+            </div>
+          </div>
+          <div class="scritta-nascosta bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="decorative-text text-3xl text-lavender mb-4">
+              Seguici sui social
+            </h2>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/lapiccola.accademia?igsh=MWp0NjhvbW94ZjFnOA=="
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/laPiccolAccademia"
+                class="text-teal text-3xl hover:text-lavender transition"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="scritta-nascosta text-center px-6 py-14">
+          <h2 class="decorative-text text-3xl text-lavender mb-4">
+            Info e Contatti
+          </h2>
+          <p class="normal-text text-xl text-teal">
+            Segreteria: +39 3272365497 <br />
+            Loredana Mattei: +39 3383298014
+          </p>
+        </section>
+
+        <footer class="text-center py-8 border-t border-lavlight">
+          <div class="flex justify-center items-center gap-2">
+            <span class="normal-text text-lavender">Powered by</span>
+            <img src="img/logoC3W.jpeg" alt="logoC3W" class="max-w-[100px]" />
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
