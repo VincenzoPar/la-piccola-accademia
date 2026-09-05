@@ -195,25 +195,25 @@
           >
             <div class="relative h-64 sm:h-96">
               <img
-                src="img/galleria/1.webp"
+                src="img/galleria/1.jpg"
                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
                 alt="Foto 1"
                 loading="lazy"
               />
               <img
-                src="img/galleria/18.webp"
+                src="img/galleria/2.jpg"
                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
                 alt="Foto 2"
                 loading="lazy"
               />
               <img
-                src="img/galleria/3.webp"
+                src="img/galleria/3.jpg"
                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
                 alt="Foto 3"
                 loading="lazy"
               />
               <img
-                src="img/galleria/4.webp"
+                src="img/galleria/4.jpg"
                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
                 alt="Foto 4"
                 loading="lazy"
@@ -251,12 +251,12 @@
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               const galleria = document.getElementById("galleria");
-              const totaleFoto = 12;
+              const totaleFoto = 16;
               const percorso = "img/galleria/";
 
               for (let i = 5; i <= totaleFoto; i++) {
                 const img = document.createElement("img");
-                img.src = `${percorso}${i}.webp`;
+                img.src = `${percorso}${i}.jpg`;
                 img.className = "rounded-xl shadow-md object-cover h-40 w-full";
                 img.loading = "lazy";
                 img.alt = `Foto ${i}`;
@@ -306,7 +306,7 @@
             });
           </script>
 
-          <div class="grid grid-cols-2 mb-6 justify-items-end">
+          <div class="flex mb-6 justify-end">
             <div></div>
             <a
               href="https://drive.google.com/drive/folders/1ikU_25KyRVtXU-fh2RdXivk2c8wzvQ3a?usp=sharing"
